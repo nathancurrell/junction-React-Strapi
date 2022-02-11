@@ -1,0 +1,51 @@
+@import "../../../styles/main";
+
+.TextInput {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    @include bp-med {
+        // flex: 1;
+    }
+    @include bp-full {
+        margin-right: 1em;
+    }
+    ::placeholder {
+        color: $connected-blue;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 17px;
+    }
+
+    &--error {
+        margin-top: 10px;
+        opacity: 1;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-error;
+    }
+
+    &--input {
+        background: transparent;
+        border: none;
+        transition: all 0.2s ease;
+    }
+
+    &--inputbox {
+        background: transparent;
+        border: 3px solid #73f9ec;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 2em;
+        padding: 0.4em;
+        padding-left: 0.8em;
+        transition: all 0.2s ease;
+        outline: none;
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            box-shadow: 0 0 0 30px $junction-white inset !important;
+            -webkit-box-shadow: 0 0 0 30px $junction-white inset !important;
+        }
+    }
+}

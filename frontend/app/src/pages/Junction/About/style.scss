@@ -1,0 +1,33 @@
+@import "../../../styles/main";
+.AboutPage {
+    background-color: $junction-white;
+
+    overflow: hidden;
+
+    .AboutPage--TopContent {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .AboutPage--textAndArrowDiv {
+        width: 40vw;
+        height: 100vh;
+    }
+
+    .AboutPage--ImageBlock {
+        width: 60vw;
+    }
+
+    .topic {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 73px;
+        text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}

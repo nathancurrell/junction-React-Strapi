@@ -1,0 +1,81 @@
+@import './styles/main';
+
+.Page {
+  height: 100%;
+  min-height: 900px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+html,
+body {
+  margin: 0px;
+  font-family: $montserrat;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+}
+
+.App--Main {
+  height: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: $connected-peach;
+  @include bp-med {
+    flex-direction: row;
+  }
+}
+
+.App--Content {
+  //if mobile
+  margin-top: 8vh;
+  overflow-y: scroll;
+  align-items: stretch;
+  z-index: 1;
+  // if not
+  @include bp-med {
+    margin-top: 0;
+    position: absolute; // this would destroy the mobile layout
+    top: 0;
+    flex-basis: 85%;
+    left: 15%;
+    width: 85%;
+  }
+
+  @include bp-full {
+    overflow-y: unset;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+  }
+  .leave-margin {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+}
+
+.Button-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.MobileLink {
+  position: relative;
+  top: -10vh;
+  @include bp-med {
+    top: 0;
+  }
+}
+
+/*
+*:hover {
+    outline: solid 0.25rem hsla(210, 100%, 100%, 0.5);
+}
+*/

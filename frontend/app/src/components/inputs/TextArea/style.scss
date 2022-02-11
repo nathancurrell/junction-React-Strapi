@@ -1,0 +1,48 @@
+@import "../../../styles/main";
+
+.TextArea {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    ::placeholder {
+        color: $junction-black;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 17px;
+    }
+    &-show-label {
+        .TextArea--label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &--label {
+        opacity: 0;
+        font-size: 14px;
+        line-height: 14px;
+        height: 14px;
+        color: $junction-black;
+        transform: translateY(10px);
+        transition: all 0.2s ease;
+    }
+
+    &--input {
+        padding: 0.4em;
+        padding-left: 0.8em;
+        line-height: 26px;
+        resize: none;
+        background: transparent;
+        border-radius: 22px;
+        border: 3px solid $junction-blue;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+        color: $junction-black;
+        transition: color 0.2s ease, border-color 0.2s ease;
+
+        &:focus,
+        &:hover {
+            outline: none;
+            color: $junction-black;
+        }
+    }
+}

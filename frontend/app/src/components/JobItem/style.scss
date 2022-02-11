@@ -1,0 +1,138 @@
+@import '../../styles/main';
+
+.JobItem {
+  width: 75%;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 2em;
+  padding: 2.5%;
+  padding-bottom: 0.5%;
+  border-radius: 2em;
+
+  &--arrow::before {
+    display: block;
+    color: $connected-orange !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0%;
+    height: 0%;
+    font-size: 300%;
+    transform: rotate(90deg);
+    text-align: center;
+    transition: 0.2s transform ease;
+    cursor: pointer;
+  }
+
+  &-expanded {
+    .JobItem--desc {
+      display: initial;
+    }
+
+    .JobItem--arrow::before {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &--location {
+    color: $connected-blue;
+    font-weight: 600;
+  }
+
+  &--head {
+    width: 90%;
+    overflow-x: wrap;
+  }
+
+  &--image {
+    width: 12em;
+    display: inline-block;
+  }
+
+  &--title {
+    @extend %font-title;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 200%;
+    color: $connected-blue;
+
+    @include bp-small-only {
+      font-size: 175%;
+    }
+  }
+
+  &--title-container {
+    margin-top: 1em;
+    margin-left: 3em;
+    display: inline-block;
+    width: 80%;
+    @include bp-small-only {
+      margin-left: 1em;
+      margin-right: 1em;
+      width: auto;
+    }
+  }
+
+  &--date-container {
+    margin-left: 3em;
+    display: inline-block;
+    width: 12em;
+    @include bp-small-only {
+      margin-left: 1em;
+    }
+  }
+
+  &--date {
+    transition: 0.2s opacity ease;
+    color: $connected-red;
+    font-weight: bold;
+  }
+
+  &--desc {
+    margin-left: 15em;
+
+    strong {
+      font-family: 'Montserrat';
+    }
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+
+      @include bp-small-only {
+        text-align: left;
+      }
+    }
+
+    li {
+      color: $connected-blue;
+    }
+  }
+
+  //   &--desc > * {
+  //     font-weight: bold !important;
+  //   }
+
+  &--desc-container {
+    display: inline-block;
+    margin-top: -1em;
+    margin-left: 3em;
+    width: 65%;
+    @include bp-small-only {
+      margin-left: 1em;
+      margin-right: 1em;
+      width: auto;
+    }
+    // margin-bottom: 1em;
+  }
+
+  &--link {
+    color: $connected-blue !important;
+    font-weight: bold;
+    font-size: 125%;
+    white-space: nowrap;
+    margin-left: 1.5%;
+    // margin-top: 1em;
+  }
+}

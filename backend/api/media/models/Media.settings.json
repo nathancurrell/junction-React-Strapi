@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "media",
+  "info": {
+    "name": "media",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "key": {
+      "default": "",
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "homePageHeaderImage",
+        "partnerPageHeaderImage",
+        "volunteerPageHeaderImage",
+        "organiserPageHeaderImage",
+        "participantPageHeaderImage",
+        "storyPageHeaderImage",
+        "calendarPageHeaderImage",
+        "teamPageHeaderImage",
+        "conceptsPageHeaderImage",
+        "errorPageHeaderImage",
+        "notFoundPageHeaderImage",
+        "interestedInOrganisingImage",
+        "junctionXTimelineImage",
+        "partnerFaqImage"
+      ],
+      "unique": true
+    },
+    "media": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

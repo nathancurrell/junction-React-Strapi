@@ -1,0 +1,59 @@
+@import "../../../styles/main";
+
+.SubmitButton {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    // flex: 1;
+
+    &--button {
+        width: 100%;
+        height: 2.5em;
+        background-color: #73f9ec;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 2em;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        justify-content: center;
+        align-items: center;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-top: 0.5em;
+        line-height: 1em;
+        outline: none;
+        &:hover,
+        &:focus {
+            outline: none;
+            background-color: $junction-black;
+            .SubmitButton--button__text {
+                color: $junction-black;
+                outline: none;
+                color: #73f9ec;
+            }
+        }
+    }
+    &:hover,
+    &:focus {
+        outline: none;
+
+        .SubmitButton--button__text {
+            color: $junction-black;
+            &:hover,
+            &:focus {
+                outline: none;
+                color: #73f9ec;
+            }
+        }
+    }
+
+    &--button__text {
+        transition: all 0.2s ease;
+        font-weight: bold;
+    }
+}

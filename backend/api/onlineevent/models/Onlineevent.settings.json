@@ -1,0 +1,99 @@
+{
+  "connection": "default",
+  "collectionName": "onlineevent",
+  "info": {
+    "name": "onlineevent",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "punchline": {
+      "default": "",
+      "type": "string"
+    },
+    "topSectionTitle": {
+      "default": "",
+      "type": "string"
+    },
+    "topSectionSubtitle": {
+      "default": "",
+      "type": "string"
+    },
+    "topSectionBody": {
+      "default": "",
+      "type": "richtext"
+    },
+    "begins": {
+      "default": "",
+      "type": "datetime"
+    },
+    "ends": {
+      "default": "",
+      "type": "datetime"
+    },
+    "prizesTotal": {
+      "default": "",
+      "type": "string"
+    },
+    "linkToEventSite": {
+      "default": "",
+      "type": "string"
+    },
+    "linkToDiscussion": {
+      "default": "",
+      "type": "string"
+    },
+    "navTitle": {
+      "default": "",
+      "type": "string"
+    },
+    "slug": {
+      "default": "",
+      "type": "string"
+    },
+    "headerImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "faq": {
+      "collection": "faq",
+      "via": "onlineevents",
+      "dominant": true
+    },
+    "partners": {
+      "collection": "partner",
+      "via": "onlineevents",
+      "dominant": true
+    },
+    "bottomSectionTitle": {
+      "default": "",
+      "type": "string"
+    },
+    "bottomSectionSubtitle": {
+      "default": "",
+      "type": "string"
+    },
+    "bottomSectionBody": {
+      "default": "",
+      "type": "richtext"
+    },
+    "challenges": {
+      "collection": "onlineeventchallenge",
+      "via": "onlineevent"
+    }
+  }
+}

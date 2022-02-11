@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "staticcontent",
+  "info": {
+    "name": "staticcontent",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "content": {
+      "default": "",
+      "type": "richtext"
+    },
+    "key": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,3 @@
+# Hackjunction.com website
+
+This is the repository powering www.hackjunction.com. The project was built with React & Strapi (api / cms), and this repository contains both the client-side and backend code. Most of the content and content types on the site are very Junction-specific, if you're looking for a generic website template based on the same stack, please see here: https://github.com/hackjunction/website-template

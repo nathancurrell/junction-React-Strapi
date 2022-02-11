@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/api/onlineevents",
+      "handler": "Onlineevent.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/onlineevents/count",
+      "handler": "Onlineevent.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/api/onlineevents/:_id",
+      "handler": "Onlineevent.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/onlineevents",
+      "handler": "Onlineevent.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/api/onlineevents/:_id",
+      "handler": "Onlineevent.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/onlineevents/:_id",
+      "handler": "Onlineevent.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

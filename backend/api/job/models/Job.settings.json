@@ -1,0 +1,68 @@
+{
+  "connection": "default",
+  "collectionName": "job",
+  "info": {
+    "name": "job",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "uniqueId": {
+      "default": "",
+      "type": "string"
+    },
+
+    "title": {
+      "default": "",
+      "type": "string"
+    },
+    "endDate": {
+      "default": "",
+      "type": "string"
+    },
+    "location": {
+      "default": "",
+      "type": "string"
+    },
+    "desc": {
+      "default": "",
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "link": {
+      "default": "",
+      "type": "string"
+    },
+    "company": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "Smartly",
+        "Genelec",
+        "HKScan",
+        "Espoo",
+        "Business-Finland",
+        "Paulig-Group",
+        "Aalto-University",
+        "aito.ai",
+        "Brella",
+        "OP",
+        "Columbia-Road",
+        "Just-AI",
+        "Dfence",
+        "Rovio",
+        "HUS",
+        "CGI",
+        "Motiva",
+        "Opetushallitus"
+      ]
+    }
+  }
+}

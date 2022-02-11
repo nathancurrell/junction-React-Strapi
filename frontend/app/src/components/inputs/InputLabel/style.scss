@@ -1,0 +1,27 @@
+@import "../../../styles/main";
+
+.InputLabel {
+    opacity: 0;
+    font-size: 14px;
+    line-height: 14px;
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+    text-align: left;
+    margin-bottom: 0.1em;
+    &-show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &c {
+        margin-bottom: 20px;
+    }
+    &-has-ml {
+        margin-left: 5px;
+    }
+
+    &-large {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}

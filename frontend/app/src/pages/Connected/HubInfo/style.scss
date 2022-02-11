@@ -1,0 +1,71 @@
+@import '../../../styles/main.scss';
+
+.Hubs {
+  p {
+    width: 80%;
+    text-align: center;
+    line-height: 22px;
+  }
+  .align {
+    text-align: center;
+  }
+}
+
+.HubSections {
+  height: auto;
+}
+
+.planetDiv {
+  width: 100%;
+  @include bp-small-only {
+    display: none;
+  }
+}
+
+.citiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 35px;
+  align-content: space-between;
+  //grid-gap: 5px;
+  margin-bottom: 1.25em;
+
+  @include bp-small-only {
+    grid-template-columns: auto;
+  }
+}
+
+.citiesText {
+  color: $connected-orange !important;
+  font-size: 1.5em;
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-weight: bold !important;
+
+  @include bp-small-only {
+    font-size: 1em;
+  }
+}
+
+.citiesText:last-child {
+  grid-column: 2/2;
+}
+
+.cityButton {
+  margin-bottom: 50em;
+}
+
+/*### UGLY HACKS TO GET MARKDOWN TO BEHAVE ###*/
+.markdownCenter > div {
+  align-self: center !important;
+  width: 80% !important;
+  margin-left: 10% !important;
+}
+
+.markdownCenter > div > * {
+  align-self: center !important;
+  width: 100% !important;
+}
+/*### END OF UGLY HACKS ###*/

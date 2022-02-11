@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "faq",
+  "info": {
+    "name": "faq",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "category": {
+      "default": "",
+      "type": "string"
+    },
+    "question": {
+      "default": "",
+      "type": "string"
+    },
+    "answer": {
+      "default": "",
+      "type": "richtext"
+    },
+    "key": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "onlineevents": {
+      "collection": "onlineevent",
+      "via": "faq"
+    }
+  }
+}

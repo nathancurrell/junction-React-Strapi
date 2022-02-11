@@ -1,0 +1,386 @@
+@import '../../styles/main';
+.Connected {
+  background-color: $connected-peach;
+  color: $connected-blue;
+  display: flex;
+  flex-direction: column;
+
+  .ConnectedContent {
+    background-color: $connected-peach;
+    text-align: center;
+  }
+  .Connected--TopContent {
+    align-content: center;
+    text-align: center;
+  }
+
+  .Connected--logo {
+    margin: 5% 0;
+    align-content: center;
+    max-width: 50em;
+    width: 100%;
+    height: auto;
+  }
+
+  .Connected-subtitle {
+    color: $connected-blue;
+    text-align: center;
+    margin: 0em 5em;
+  }
+
+  .Button-small {
+    background-color: $connected-orange;
+    border: 3px solid $connected-orange;
+    box-shadow: 2px 4px 4px rgba(35, 35, 35, 0.15);
+    & > span {
+      color: $connected-blue;
+    }
+    &.selected {
+      background-color: $connected-blue;
+      color: $connected-red;
+      border-color: $connected-red;
+    }
+  }
+
+  // TODO rethink this as .Button-blue or somethingnp
+  .Button-default {
+    background-color: $connected-blue;
+    border: 3px solid $connected-blue;
+
+    text-transform: none !important;
+    box-shadow: 2px 4px 4px rgba(35, 35, 35, 0.15);
+    margin-bottom: 2%;
+    & > span {
+      color: $connected-peach;
+    }
+    &.selected {
+      background-color: $connected-teal;
+      & > span {
+        color: $connected-blue;
+      }
+      border-color: $connected-teal;
+    }
+  }
+
+  .NavMenu {
+    background-color: $connected-blue;
+
+    color: $connected-peach;
+
+    &--inner {
+      &__menu {
+        span.toHome {
+          color: $connected-peach;
+        }
+        &-item,
+        &-title {
+          color: $connected-peach;
+        }
+        &-item:hover,
+        &-title:hover {
+          opacity: 1;
+          color: $connected-teal;
+        }
+      }
+    }
+
+    .top,
+    .bottom,
+    .left,
+    .right {
+      display: none;
+    }
+
+    &--exit {
+      .hamburger,
+      .hamburger-box,
+      .hamburger-spin {
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+          background-color: $connected-peach;
+        }
+      }
+    }
+  }
+
+  .NavMenuMobile {
+    background-color: $connected-blue;
+  }
+  .HeaderMobile {
+    background-color: $connected-blue;
+  }
+
+  .Footer {
+    span {
+      color: $connected-blue;
+    }
+    background: $connected-peach;
+    border-top: 0.1em solid $connected-line;
+
+    h2 {
+      color: $connected-orange;
+    }
+    &--divider {
+      background-color: $connected-line;
+    }
+    &--left {
+      &-divider {
+        background-color: $connected-line;
+      }
+      &-second {
+        &__FooterLinkList {
+          span {
+            a {
+              color: $connected-blue;
+            }
+          }
+        }
+      }
+    }
+
+    .FormRow {
+      display: flex;
+      justify-content: left;
+      margin-top: 0.5em;
+      width: 100%;
+    }
+
+    .TextInput--inputbox,
+    .DropDown--input {
+      max-width: 10em;
+    }
+
+    .TextInput--inputbox,
+    .DropDown--input,
+    .TextArea--input {
+      border-color: $connected-blue;
+      color: $connected-teal;
+      padding: 0.6em;
+      padding-left: 0.9em;
+
+      &::placeholder {
+        color: $connected-teal;
+      }
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        box-shadow: 0 0 0 30px $connected-peach inset !important;
+        -webkit-box-shadow: 0 0 0 30px $connected-peach inset !important;
+        &::before {
+          color: $connected-blue;
+        }
+      }
+    }
+    .SubmitButton--button {
+      background-color: $connected-blue;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-width: 3px;
+        border-color: $connected-blue;
+        .SubmitButton--button__text {
+          color: $connected-blue;
+        }
+      }
+      .SubmitButton--button__text {
+        color: $connected-red;
+        padding: 3em 1em 3em 1em;
+      }
+    }
+  }
+
+  .ImageHeader > h2 {
+    color: $connected-peach;
+    -webkit-text-stroke: 2.5px $connected-blue;
+  }
+
+  h1,
+  h2,
+  h3,
+  i,
+  label,
+  p {
+    font-style: normal;
+    font-family: Montserrat;
+    color: $connected-blue;
+
+    &::before {
+      color: $connected-blue;
+    }
+    &::after {
+      color: $connected-blue;
+    }
+  }
+
+  a {
+    color: $connected-orange;
+    p {
+      color: $connected-blue;
+    }
+  }
+
+  p {
+    font-weight: 400;
+  }
+
+  .DividerLine {
+    background-color: $connected-line;
+  }
+
+  &-parallax {
+    background-image: url('../../assets/images/chainoutlines.svg');
+    background-repeat: repeat;
+    background-position: center;
+    height: 90vh;
+    position: relative;
+    border-bottom: 0.1em solid $connected-line;
+    margin-bottom: 10%;
+
+    @include bp-med {
+      height: 100vh;
+    }
+
+    &--content {
+      box-shadow: -10px 10px $connected-blue, 1px -1px $connected-blue,
+        -0.5px -1px $connected-blue, 1px 0.5px $connected-blue;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: $connected-peach;
+      position: relative;
+      z-index: 3;
+      margin: 10%;
+
+      border-radius: 1em;
+
+      @include bp-small-only {
+        margin-top: 15vh;
+        padding: 6%;
+      }
+
+      @include bp-med {
+        padding: 3em;
+        width: 28em;
+        margin: auto;
+        margin-top: 5%;
+      }
+
+      @include bp-full {
+        width: 30em;
+      }
+
+      h2,
+      h1 {
+        margin: 0;
+      }
+
+      &-connectedLogo {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2em;
+        @include bp-med {
+          width: 80%;
+        }
+      }
+
+      &-hackTheFuture {
+        letter-spacing: -1px;
+        text-shadow: -3px 3px $connected-blue;
+        font-family: Montserrat;
+        font-weight: 600 !important;
+        font-size: 3em;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 1.2em;
+        -webkit-text-fill-color: $connected-peach;
+        color: $connected-blue;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $connected-blue;
+        @include bp-med {
+          font-size: 4em;
+        }
+      }
+
+      &-overTheWorld {
+        text-align: center;
+        margin: 0;
+        font-size: 1em;
+        @include bp-med {
+          font-size: 1.3em;
+        }
+      }
+
+      &-eventDates {
+        font-size: 1.5em;
+        @include bp-med {
+          font-size: inherit;
+        }
+      }
+
+      &-computer {
+        width: 50%;
+        margin: 10% auto;
+        @include bp-med {
+          width: 40%;
+        }
+      }
+    }
+
+    .chainOutlines {
+      overflow: hidden;
+      height: 100%;
+    }
+    .smallChain-1 {
+      position: absolute;
+      height: 20vh;
+      z-index: 2;
+      display: none;
+      @include bp-med {
+        display: block;
+        top: 0;
+        right: 8%;
+      }
+    }
+    .smallChain-2 {
+      position: absolute;
+      height: 20vh;
+      z-index: 2;
+      display: none;
+      @include bp-med {
+        right: 0;
+        bottom: 0;
+        display: block;
+      }
+    }
+    .bigChain-1 {
+      height: 60vh;
+      position: absolute;
+      z-index: 3;
+      top: -5%;
+      left: -20%;
+      @include bp-med {
+        height: 80vh;
+        top: 0;
+        left: 0;
+      }
+    }
+    .bigChain-2 {
+      height: 60vh;
+      overflow: visible;
+      position: absolute;
+      z-index: 4;
+      right: -30%;
+      bottom: -10%;
+      @include bp-med {
+        height: 80vh;
+        right: 0;
+        bottom: -10%;
+      }
+    }
+  }
+}

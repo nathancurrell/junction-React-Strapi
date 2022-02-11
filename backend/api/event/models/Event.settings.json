@@ -1,0 +1,74 @@
+{
+  "connection": "default",
+  "collectionName": "event",
+  "info": {
+    "name": "event",
+    "description": ""
+  },
+  "options": {
+    "timestamps": ["createdAt", "updatedAt"]
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "begins": {
+      "default": "",
+      "type": "datetime"
+    },
+    "ends": {
+      "default": "",
+      "type": "datetime"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "shortDescription": {
+      "default": "",
+      "type": "string"
+    },
+    "linkToEventSite": {
+      "default": "",
+      "type": "string"
+    },
+    "linkToTickets": {
+      "default": "",
+      "type": "string"
+    },
+    "locationDescription": {
+      "default": "",
+      "type": "string"
+    },
+    "latitude": {
+      "default": "",
+      "type": "decimal"
+    },
+    "longitude": {
+      "default": "",
+      "type": "decimal"
+    },
+    "showOnMap": {
+      "type": "boolean"
+    },
+    "showInCalendar": {
+      "type": "boolean"
+    },
+    "timeDescription": {
+      "default": "",
+      "type": "string"
+    },
+    "eventconcept": {
+      "model": "eventconcept",
+      "via": "events"
+    },
+    "linkToEventSiteText": {
+      "type": "string"
+    },
+    "linkToTicketsText": {
+      "type": "string"
+    }
+  }
+}

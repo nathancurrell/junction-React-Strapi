@@ -1,0 +1,64 @@
+@import "../../styles/main";
+
+.FaqGrid {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include bp-custom(800px) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.FaqGridItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-style: solid;
+    border-radius: 0.5em;
+    border-width: 0.1em;
+    border-color: $connected-orange;
+    margin-bottom: $padding-base;
+
+    padding: 0.2em;
+    padding-left: 0.6em;
+
+    &-expanded {
+        .FaqGridItem--answer {
+            display: initial;
+        }
+
+        .FaqGridItem--question i {
+            transform: rotateZ(90deg);
+        }
+    }
+
+    &--question {
+        @extend %font-title;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $connected-blue;
+        i {
+            display: block;
+            transform: rotateZ(0deg);
+            transition: 0.2s transform ease;
+            color: $connected-teal;
+            font-size: 2em;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+}

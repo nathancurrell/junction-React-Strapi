@@ -1,0 +1,16 @@
+@import '../../styles/main';
+
+.SocialMediaIcons {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 2em 2em;
+  column-gap: 0.5em;
+  width: 15em;
+  position: fixed;
+  bottom: 5%;
+  z-index: 20;
+  @include bp-small-only {
+    display: none;
+  }
+  margin-left: 4%;
+}

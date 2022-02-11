@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "partner",
+  "info": {
+    "name": "partner",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "website": {
+      "default": "",
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "showcase": {
+      "default": false,
+      "type": "boolean"
+    },
+    "onlineevents": {
+      "collection": "onlineevent",
+      "via": "partners"
+    },
+    "eventconcepts": {
+      "collection": "eventconcept",
+      "via": "localPartners"
+    }
+  }
+}

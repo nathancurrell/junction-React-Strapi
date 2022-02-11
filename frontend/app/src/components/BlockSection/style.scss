@@ -1,0 +1,94 @@
+@import "../../styles/main";
+
+.BlockSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    @include bp-full {
+        height: 100vh;
+        width: 100%;
+        padding: 5em;
+        padding-top: 5em;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &--half {
+        height: auto;
+        width: 80%;
+        margin: auto;
+
+        @include bp-med {
+            height: 50vh;
+            width: 100%;
+        }
+    }
+
+    &--inverted {
+        flex-direction: column;
+        @include bp-med {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &--left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include bp-full {
+            padding: 0em 0em 0em 4em;
+            margin-right: 25px;
+            align-items: flex-start;
+        }
+
+        &__title {
+            margin: 0;
+
+            text-align: center;
+            word-break: break-word;
+
+            @include bp-full {
+                text-align: left;
+            }
+        }
+
+        &__subtitle {
+            * {
+                text-align: center !important;
+            }
+
+            @include bp-full {
+                * {
+                    text-align: left !important;
+                }
+            }
+        }
+    }
+
+    &--right {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 36px;
+        justify-content: center;
+
+        @include bp-full {
+            margin-top: 0;
+            align-items: flex-start;
+        }
+
+        & > p {
+            margin: 0;
+        }
+    }
+    img {
+        max-width: 90vw;
+        max-height: 45vh;
+    }
+}
